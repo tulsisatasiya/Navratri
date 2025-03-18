@@ -5,13 +5,13 @@ const Category = require("../models/category.model");
 
 const router = express.Router();
 
-// ✅ Get detailed ticket information
+//  Get detailed ticket information
 router.get("/:id", async (req, res) => {
   try {
     const ticket = await Ticket.findById(req.params.id)
       .populate({
         path: "subCategory",
-        populate: { path: "category" }, // Populate Category inside SubCategory
+        populate: { path: "category" }, 
       });
 
     if (!ticket) {
@@ -22,14 +22,8 @@ router.get("/:id", async (req, res) => {
     const ticketDetails = {
       _id: ticket._id,
       name: ticket.name,
-      ticketPicture: ticket.ticketPicture,
       price: ticket.price,
-      eventDate: ticket.eventDate,
-      location: ticket.location,
-      availableSeats: ticket.availableSeats,
-      status: ticket.status,
-      createdAt: ticket.createdAt,
-      updatedAt: ticket.updatedAt,
+     
       subCategory: {
         _id: ticket.subCategory._id,
         name: ticket.subCategory.name,

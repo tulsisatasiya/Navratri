@@ -1,12 +1,12 @@
 const jwt = require("jsonwebtoken");
 const UserRefreshToken = require("../../models/UserRefreshToken");
-require("dotenv").config(); // Load environment variables
+require("dotenv").config(); 
 
 const generateTokens = async (user) => {
   try {
     const payload = { _id: user._id, role: user.role };
 
-    // Debug: Check if env variables are loaded
+    
     // console.log("Access Token Secret:", process.env.JWT_ACCESS_TOKEN_SECRET_KEY);
     // console.log("Refresh Token Secret:", process.env.JWT_REFRESH_TOKEN_SECRET_KEY);
 

@@ -6,10 +6,6 @@ const { subcategoryValidation } = require("../validation");
 
 const router = express.Router();
 
-/* User & Admin: Get All SubCategories */
-// router.get("/get", subCategoryController.getAllSubCategories);
-// router.get("/get/:search", subCategoryController.getSubCategoryByIdOrName);
-
 router.get("/get", subCategoryController.getAllSubCategories);
 router.get("/get/:search", subCategoryController.getSubCategoryByIdOrName);
 

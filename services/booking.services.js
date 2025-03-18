@@ -37,7 +37,7 @@ const createBooking = async (userId, ticketId, quantity) => {
 
     const totalPrice = ticket.price * quantity;
 
-    // ✅ Corrected: Use Booking instead of bookingSchema
+    // Use Booking instead of bookingSchema
     const newBooking = new Booking({
       user: userId,
       ticket: ticketId,

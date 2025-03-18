@@ -1,17 +1,17 @@
 const mongoose = require("mongoose");
-require("dotenv").config(); // Ensure dotenv is loaded
+require("dotenv").config(); 
 
 const connectDB = async () => {
   try {
     const connection = await mongoose.connect(process.env.DATABASE_URL, {
-      // useNewUrlParser: true,
-      // useUnifiedTopology: true,
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
     });
-    console.log(`✅ MongoDB Connected: ${connection.connection.host}`);
+    console.log(` MongoDB Connected: ${connection.connection.host}`);
   } catch (error) {
-    console.error("❌ MongoDB Connection Error:", error.message);
-    process.exit(1); // Exit process if connection fails
+    console.error(" MongoDB Connection Error:", error.message);
+    process.exit(1); 
   }
 };
 
-module.exports = connectDB; // ✅ Correct export
+module.exports = connectDB; // 

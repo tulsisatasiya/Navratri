@@ -8,7 +8,7 @@ const basePath = path.join(__dirname, "../public/images");
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    console.log("File upload request body:", req.body); // Debugging log
+    console.log("File upload request body:", req.body);
 
     let uploadPath;
 
@@ -22,11 +22,11 @@ const storage = multer.diskStorage({
       fs.mkdirSync(uploadPath, { recursive: true });
     }
 
-    console.log("Saving file to:", uploadPath); // Debugging log
+    console.log("Saving file to:", uploadPath); 
     cb(null, uploadPath);
   },
   filename: function (req, file, cb) {
-    console.log("Uploading file:", file.originalname); // Debugging log
+    console.log("Uploading file:", file.originalname); 
     const uniqueName = `${Date.now()}-${file.originalname}`;
     cb(null, uniqueName);
   },

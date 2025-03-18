@@ -94,15 +94,7 @@ const loginUser = async (req, res) => {
   }
 };
 
-/* Get All Users */
-// const getAllUsers = async (req, res) => {
-//   try {
-//     const users = await userService.getAllUsers();
-//     return res.status(200).json({ success: true, users });
-//   } catch (err) {
-//     return res.status(500).json({ success: false, message: err.message });
-//   }
-// };
+
 const getAllUsers = async (req, res) => {
   try {
     // Ensure only admins can access

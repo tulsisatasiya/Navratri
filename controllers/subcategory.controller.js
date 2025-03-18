@@ -23,15 +23,7 @@ const addSubCategory = async (req, res) => {
   }
 };
 
-/* Get All SubCategories */
-// const getAllSubCategories = async (req, res) => {
-//   try {
-//     const subCategories = await subCategoryService.getAllSubCategories();
-//     return res.status(200).json({ success: true, subCategories });
-//   } catch (err) {
-//     return res.status(500).json({ success: false, message: err.message });
-//   }
-// };
+
 
 /* Get All SubCategories with Pagination & Sorting */
 const getAllSubCategories = async (req, res) => {

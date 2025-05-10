@@ -1,4 +1,5 @@
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
+
 const { userService } = require("../services");
 const { generateTokens } = require("../utils/token/generateTokens");
 

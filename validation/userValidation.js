@@ -8,7 +8,7 @@ const userValidationSchema = Joi.object({
     "string.pattern.base": "Phone number must be 10 digits."
   }),
   role: Joi.string().valid("admin", "user").default("user"),
-  city: Joi.string().min(2).max(100).required(),
+  city: Joi.string().min(2).max(100),
   password: Joi.string().min(6).required(),
   profilePic: Joi.string().optional(),
 });

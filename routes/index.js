@@ -8,6 +8,7 @@ const ticketRoute = require("./ticket.route");
 const bookingRoute = require("./booking.routes");
 const verifyRoutes = require("./verify.routes");
 const ticketDetailsRoutes = require("./ticketDetails.routes");
+const eventRoutes = require("./event.routes");
 
 route.use("/user", userRoute);
 route.use("/Category", CategoryRoute);
@@ -16,9 +17,7 @@ route.use("/ticket", ticketRoute);
 route.use("/booking", bookingRoute);
 route.use("/verify", verifyRoutes);
 route.use("/ticketDetails", ticketDetailsRoutes);
-
-
-
+route.use("/event", eventRoutes);
 
 
 module.exports = route;

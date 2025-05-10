@@ -10,7 +10,9 @@ const { userValidation } = require("../validation");
 const router = express.Router();
 
 //singup 
-router.post("/signup",validate(userValidation.userValidationSchema),upload.single("profilePic"), authController.addUser);
+// router.post("/signup",validate(userValidation.userValidationSchema),upload.single("profilePic"), authController.addUser);
+router.post("/signup", validate(userValidation.userValidationSchema), upload.single("profilePic"), authController.addUser);
+
 
 //login
 router.post("/login", authController.loginUser);
@@ -24,6 +26,7 @@ router.put("/update/:id",verifyAdmin,validate(userValidation.userValidationSchem
 
 //delete
 router.delete("/delete/:id",verifyAdmin,  authController.deleteUser);
+
 
 
   
